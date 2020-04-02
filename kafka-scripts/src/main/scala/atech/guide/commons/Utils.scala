@@ -1,10 +1,9 @@
 package atech.guide.commons
 
 import java.util.Properties
-
-import atech.guide.producer.KafkaProducerKeys.logger
+import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.clients.producer.{Callback, ProducerConfig, RecordMetadata}
-import org.apache.kafka.common.serialization.StringSerializer
+import org.apache.kafka.common.serialization.{StringDeserializer, StringSerializer}
 import org.slf4j.LoggerFactory
 
 import scala.concurrent.Promise
@@ -17,12 +16,24 @@ object Utils {
 
   private val logger = LoggerFactory.getLogger(getClass)
 
-  def getProducerProperties = {
+  def getProducerProperties: Properties = {
     val props = new Properties()
     props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaBootstrapServer)
     props.put(ProducerConfig.CLIENT_ID_CONFIG, "KafkaProducer")
     props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, classOf[StringSerializer].getName)
     props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, classOf[StringSerializer].getName)
+    props
+  }
+
+  def getConsumerProperties(groupID: String, offset: String): Properties = {
+    val props = new Properties()
+    props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaBootstrapServer)
+    props.put(ConsumerConfig.CLIENT_ID_CONFIG, "KafkaProducer")
+    props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, classOf[StringDeserializer].getName)
+    props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, classOf[StringDeserializer].getName)
+
+    props.put(ConsumerConfig.GROUP_ID_CONFIG, groupID)
+    props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, offset)
     props
   }
 
@@ -46,5 +57,4 @@ object Utils {
       }
     }
   }
-
 }
