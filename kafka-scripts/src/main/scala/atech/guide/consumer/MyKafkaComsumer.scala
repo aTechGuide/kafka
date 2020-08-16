@@ -6,6 +6,7 @@ import atech.guide.commons.Utils
 import org.slf4j.LoggerFactory
 import org.apache.kafka.clients.consumer.{ConsumerRecords, KafkaConsumer}
 
+import scala.annotation.tailrec
 import scala.collection.JavaConverters._
 
 object MyKafkaComsumer {
@@ -15,6 +16,12 @@ object MyKafkaComsumer {
   private val offset = "earliest"
   private val kafkaTopic = "atechguide_first_topic_partitioned"
 
+  @tailrec
+  def forever[T](expression: => T): Unit = {
+    expression
+    forever(expression)
+  }
+
   def main(args: Array[String]): Unit = {
 
     val props = Utils.getConsumerProperties(group, offset)
@@ -23,7 +30,7 @@ object MyKafkaComsumer {
     val consumer = new KafkaConsumer[String, String](props)
     consumer.subscribe(Seq(kafkaTopic).asJava)
 
-    while (true) {
+    forever {
       val records: ConsumerRecords[String, String] = consumer.poll(Duration.ofMillis(100)) // new in Kafka
 
       records.asScala.foreach { record =>

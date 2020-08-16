@@ -8,6 +8,7 @@
   - Without Partition -> `kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic atechguide_first_topic`
   - With Partition -> `kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 3 --replication-factor 1 --topic atechguide_first_topic_partitioned`
 - Connect to Kafka Consumer -> `kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic atechguide_first_topic_partitioned`
+- Connect to producer -> `kafka-console-producer.sh --broker-list localhost:9092 --topic atechguide_first_topic_partitioned`
 
 
 # Reference 
