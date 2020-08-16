@@ -13,3 +13,5 @@
 # Reference 
 - This project is build as a part of [Apache Kafka Series - Learn Apache Kafka for Beginners v2](https://www.udemy.com/course/apache-kafka/) Course
 - This project also takes help of [rockthejvm.com  spark-streaming](https://rockthejvm.com/p/spark-streaming) Course
+- [Wurstmeister/kafka-docker](https://github.com/wurstmeister/kafka-docker)
+- [Jaceklaskowski apache-kafka/kafka-docker](https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-docker.html)
