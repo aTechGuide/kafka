@@ -1,7 +1,7 @@
 .DS_Store
 
 *.idea/
-kafka-scripts/main.iml
-kafka-scripts/project/target/*
-kafka-scripts/project/project/target/*
-kafka-scripts/target/*
+scala/kafka-scripts/main.iml
+scala/kafka-scripts/project/target/*
+scala/kafka-scripts/project/project/target/*
+scala/kafka-scripts/target/*
