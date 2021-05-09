@@ -5,3 +5,6 @@ scala/kafka-scripts/main.iml
 scala/kafka-scripts/project/target/*
 scala/kafka-scripts/project/project/target/*
 scala/kafka-scripts/target/*
+
+
+java/kafka-producer-scripts/target/*
