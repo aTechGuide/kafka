@@ -11,3 +11,5 @@ java/kafka-producer-scripts/target/*
 
 
 java/kafka-consumer-scripts/target/*
+
+java/kafka-streams-scripts/target/*
