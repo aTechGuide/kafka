@@ -81,7 +81,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${project.basedir}/src/main/resources/schema/</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/src/main/resources/schema/json/</sourceDirectory>
                             <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
                             <includeAdditionalProperties>false</includeAdditionalProperties>
                             <includeHashcodeAndEquals>false</includeHashcodeAndEquals>
