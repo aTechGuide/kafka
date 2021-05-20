@@ -2,6 +2,7 @@ package guide.atech.producers.json;
 
 import guide.atech.producers.json.serde.JsonSerializer;
 import guide.atech.producers.json.types.Message;
+import guide.atech.producers.json.types.SubMessage;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -9,7 +10,7 @@ import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.IntegerSerializer;
 
-import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.Properties;
 import java.util.Random;
 
@@ -21,10 +22,9 @@ import java.util.Random;
 @Slf4j
 public class JsonProducer {
 
-    private static final String TOPIC_NAME = "json-producer-topic";
-    private static final Integer NUM_MESSAGES = 2;
+    private static final String TOPIC_NAME = "json-topic-v1";
+    private static final Integer NUM_MESSAGES = 5;
     private static final Random random = new Random();
-    private static final DecimalFormat df = new DecimalFormat("###.##");
 
     public static void main(String[] args) {
         log.info("Creating Kafka Producer");
@@ -46,11 +46,17 @@ public class JsonProducer {
     private static Message createMessage(int i) {
 
         Message message = new Message();
-        message.setMessageCode(String.valueOf(i));
-        message.setMessagePrice(Double.valueOf(df.format(random.nextDouble())));
-        message.setMessageQuantity(random.nextInt(5));
+        message.setMessageCode(i);
+        message.setMessageDescription("Random String-" + random.nextInt(5));
+        message.setSubMessages(Arrays.asList(createSubMessage(random.nextInt(10)), createSubMessage(random.nextInt(10))));
 
         return message;
+    }
+
+    private static SubMessage createSubMessage(int i) {
+        SubMessage subMessage = new SubMessage();
+        subMessage.setSubMessageCode(i);
+        return subMessage;
     }
 
     private static Properties createProperties() {

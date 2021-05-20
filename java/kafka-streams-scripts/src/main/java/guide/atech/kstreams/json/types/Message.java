@@ -1,4 +1,4 @@
-package guide.atech.producers.json.types;
+package guide.atech.kstreams.json.types;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -60,7 +60,7 @@ public class Message {
         return new ToStringBuilder(this)
                 .append("messageCode", messageCode)
                 .append("messagePrice", messageDescription)
-                .append("SubMessages", subMessages)
+                .append("subMessages", subMessages)
                 .toString();
     }
 }
