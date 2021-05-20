@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "javaType": "guide.atech.kstreams.json2pojo.PosInvoice",
+  "extends": {"$ref": "Invoice.json"},
+  "properties": {
+    "StoreID": {"type":  "string"},
+    "PosID": {"type":  "string"},
+    "CustomerType": {"type":  "string"},
+    "DeliveryType": {"type":  "string"},
+    "DeliveryAddress": {"type":  "object", "$ref":  "DeliveryAddress.json"}
+  }
+}

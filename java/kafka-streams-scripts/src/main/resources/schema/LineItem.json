@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "javaType": "guide.atech.kstreams.json2pojo.LineItem",
+  "properties": {
+    "itemCode": {"type":  "string"},
+    "ItemDescription": {"type":  "string"},
+    "ItemPrice": {"type":  "number"},
+    "ItemQuantity": {"type":  "integer"},
+    "TotalValue": {"type":  "number"}
+  }
+}

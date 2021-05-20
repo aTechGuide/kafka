@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "javaType": "guide.atech.kstreams.json2pojo.DeliveryAddress",
+  "properties": {
+    "AddressLine": {"type":  "string"},
+    "City": {"type":  "string"},
+    "State": {"type":  "string"},
+    "PinCode": {"type":  "string"},
+    "ContactNumber": {"type":  "number"}
+  }
+}

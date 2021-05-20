@@ -69,6 +69,27 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+
+            <!-- Json Schema to POJO plugin-->
+            <plugin>
+                <groupId>org.jsonschema2pojo</groupId>
+                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                <version>0.5.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>${project.basedir}/src/main/resources/schema/</sourceDirectory>
+                            <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
+                            <includeAdditionalProperties>false</includeAdditionalProperties>
+                            <includeHashcodeAndEquals>false</includeHashcodeAndEquals>
+                            <generateBuilders>true</generateBuilders>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 

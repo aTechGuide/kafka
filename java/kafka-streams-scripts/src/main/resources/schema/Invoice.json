@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "javaType": "guide.atech.kstreams.json2pojo.Invoice",
+  "properties": {
+    "InvoiceNumber": {"type":  "string"},
+    "CreatedTime": {"type":  "object", "javaType":  "java.lang.Long"},
+    "CustomCardNo": {"type":  "string"},
+    "TotalAmount": {"type":  "number"},
+    "NumberOfItem": {"type":  "integer"},
+    "PaymentMethod": {"type":  "string"},
+    "InvoiceLineItems": {"type":  "array",
+      "items": {
+        "type": "object",
+        "$ref": "LineItem.json"
+      }
+    }
+  }
+}
