@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "javaType": "guide.atech.kstreams.json2pojo.DeliveryAddress",
+  "javaType": "guide.atech.schema.json.DeliveryAddress",
   "properties": {
     "AddressLine": {"type":  "string"},
     "City": {"type":  "string"},

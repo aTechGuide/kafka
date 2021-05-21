@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "javaType": "guide.atech.kstreams.json2pojo.PosInvoice",
+  "javaType": "guide.atech.schema.json.PosInvoice",
   "extends": {"$ref": "Invoice.json"},
   "properties": {
     "StoreID": {"type":  "string"},

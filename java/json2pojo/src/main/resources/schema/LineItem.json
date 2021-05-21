@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "javaType": "guide.atech.kstreams.json2pojo.LineItem",
+  "javaType": "guide.atech.schema.json.LineItem",
   "properties": {
     "itemCode": {"type":  "string"},
     "ItemDescription": {"type":  "string"},

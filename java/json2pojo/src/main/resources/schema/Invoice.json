@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "javaType": "guide.atech.kstreams.json2pojo.Invoice",
+  "javaType": "guide.atech.schema.json.Invoice",
   "properties": {
     "InvoiceNumber": {"type":  "string"},
     "CreatedTime": {"type":  "object", "javaType":  "java.lang.Long"},
