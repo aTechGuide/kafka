@@ -1,0 +1,13 @@
+{
+    "namespace": "guide.atech.schema.avro",
+    "type": "record",
+    "name": "PosInvoice",
+    "fields": [
+        {"name": "InvoiceNumber", "type": ["null", "string"]},
+        {"name": "CreatedTime", "type": ["null", "long"]},
+        {"name": "TotalAmount", "type": ["null", "double"]},
+        {"name": "NumberOfItems", "type": ["null", "int"]},
+        {"name": "DeliveryAddress", "type": ["null", "DeliveryAddress"]},
+        {"name": "InvoiceLineItems", "type": {"type": "array", "items": "LineItem"}}
+    ]
+}
