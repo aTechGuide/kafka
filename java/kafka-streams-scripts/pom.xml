@@ -22,12 +22,14 @@
             <artifactId>kafka-clients</artifactId>
             <version>${kafka.version}</version>
         </dependency>
+
         <!-- Apache Kafka Streams-->
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-streams</artifactId>
             <version>${kafka.version}</version>
         </dependency>
+
         <!-- Apache Log4J2 binding for SLF4J -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -55,7 +57,6 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.9.10.7</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -71,6 +72,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>
