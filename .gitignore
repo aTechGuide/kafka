@@ -16,6 +16,8 @@ java/kafka-consumer-scripts/target/*
 
 java/kafka-streams-scripts/target/*
 
+java/kafka-avro-streams-scripts/target/*
+
 java/avro2pojo/target/*
 
 java/json2pojo/target/*
