@@ -15,12 +15,6 @@
     </properties>
 
     <dependencies>
-        <!--Apache commons-->
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.6</version>
-        </dependency>
         <!-- Avro dependency-->
         <dependency>
             <groupId>org.apache.avro</groupId>
