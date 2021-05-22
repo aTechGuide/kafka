@@ -9,6 +9,8 @@ scala/kafka-scripts/target/*
 
 java/kafka-producer-scripts/target/*
 
+java/kafka-avro-producer-scripts/target/*
+
 
 java/kafka-consumer-scripts/target/*
 
