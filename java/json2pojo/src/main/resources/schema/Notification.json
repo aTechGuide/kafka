@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "javaType": "guide.atech.schema.json.Notification",
+  "extends": {"$ref": "Invoice.json"},
+  "properties": {
+    "InvoiceNumber": {"type":  "string"},
+    "CustomerCardNo": {"type":  "string"},
+    "TotalAmount": {"type":  "number"},
+    "EarnedLoyaltyPoints": {"type":  "number"},
+    "TotalLoyaltyPoints": {"type":  "number"}
+  }
+}

@@ -1,9 +1,9 @@
 package guide.atech.kstreams.json;
 
 import guide.atech.kstreams.BasicStreams;
-import guide.atech.kstreams.json.serde.AppSerdes;
 import guide.atech.kstreams.json.types.Message;
 import guide.atech.kstreams.json.types.SubMessage;
+import guide.atech.kstreams.serde.AppSerdes;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.apache.kafka.streams.KafkaStreams;
@@ -24,9 +24,11 @@ public class MapFlatMapFilterStreams {
     private static final String OUTPUT_TOPIC_NAME_V2 = "output-topic-v2";
     private static final String OUTPUT_TOPIC_NAME_V3 = "output-topic-v3";
 
+
     public static void main(String[] args) {
 
         val properties = createProperties();
+
 
         StreamsBuilder builder = new StreamsBuilder();
         KStream<Integer, Message> ks0 = builder.stream(INPUT_TOPIC_NAME,
