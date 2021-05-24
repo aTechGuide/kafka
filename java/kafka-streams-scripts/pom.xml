@@ -13,6 +13,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <java.version>1.8</java.version>
         <kafka.version>2.3.0</kafka.version>
+        <jersey.version>2.27</jersey.version>
     </properties>
 
     <dependencies>
@@ -49,6 +50,27 @@
             <groupId>guide.atech</groupId>
             <artifactId>json2pojo</artifactId>
             <version>1.0.1</version>
+        </dependency>
+
+        <!--spark java framework for embedded  -->
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>2.5</version>
+        </dependency>
+
+        <!-- javax.ws.rs  -->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.1</version>
+        </dependency>
+
+        <!--Jeersey dependencies -->
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>${jersey.version}</version>
         </dependency>
     </dependencies>
 

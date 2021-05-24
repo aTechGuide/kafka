@@ -15,6 +15,7 @@ java/kafka-avro-producer-scripts/target/*
 java/kafka-consumer-scripts/target/*
 
 java/kafka-streams-scripts/target/*
+java/kafka-streams-scripts/tmp/*
 
 java/kafka-avro-streams-scripts/target/*
 

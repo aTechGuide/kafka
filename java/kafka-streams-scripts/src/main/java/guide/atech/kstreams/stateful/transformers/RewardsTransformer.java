@@ -11,7 +11,7 @@ import org.apache.kafka.streams.state.KeyValueStore;
 public class RewardsTransformer implements ValueTransformer<PosInvoice, Notification> {
 
     private KeyValueStore<String, Double> stateStore;
-    public final static Double LOYALTY_FACTOR = 0.02;
+    public static final  Double LOYALTY_FACTOR = 0.02;
 
     @Override
     public void init(ProcessorContext processorContext) {
@@ -49,6 +49,6 @@ public class RewardsTransformer implements ValueTransformer<PosInvoice, Notifica
 
     @Override
     public void close() {
-
+        // Nothing to Close
     }
 }
