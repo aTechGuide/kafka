@@ -22,6 +22,9 @@ import java.util.Properties;
  * - KOTAK:2323.0 [Filter Scenario, This value will not be present in KT1]
  * - HDFCBANK:53.430 [Update Scenario]
  * - HDFCBANK: [Delete Scenario]
+ *
+ * Ref
+ * - https://www.udemy.com/course/kafka-streams-real-time-stream-processing-master-class/learn/lecture/14244016#notes
  */
 @Slf4j
 public class StreamingTableApp {

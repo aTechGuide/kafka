@@ -15,6 +15,10 @@ import org.apache.kafka.streams.state.Stores;
 
 import java.util.Properties;
 
+/**
+ * Ref
+ * - https://www.udemy.com/course/kafka-streams-real-time-stream-processing-master-class/learn/lecture/14243916#notes
+ */
 @Slf4j
 public class RewardsApp {
 
