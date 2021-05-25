@@ -1,6 +1,6 @@
 package guide.atech.kstreams.stateful;
 
-import guide.atech.kstreams.serde.AppSerdes;
+import guide.atech.serde.AppSerdes;
 import guide.atech.kstreams.stateful.partitioners.RewardPartitioner;
 import guide.atech.kstreams.stateful.transformers.RewardsTransformer;
 import lombok.extern.slf4j.Slf4j;

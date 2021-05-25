@@ -1,4 +1,4 @@
-package guide.atech.kstreams.serde;
+package guide.atech.serde;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.NoArgsConstructor;

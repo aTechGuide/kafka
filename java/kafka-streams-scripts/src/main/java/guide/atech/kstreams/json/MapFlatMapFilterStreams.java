@@ -3,7 +3,7 @@ package guide.atech.kstreams.json;
 import guide.atech.kstreams.BasicStreams;
 import guide.atech.kstreams.json.types.Message;
 import guide.atech.kstreams.json.types.SubMessage;
-import guide.atech.kstreams.serde.AppSerdes;
+import guide.atech.serde.AppSerdes;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.apache.kafka.streams.KafkaStreams;

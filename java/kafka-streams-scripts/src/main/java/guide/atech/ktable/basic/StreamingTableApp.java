@@ -1,6 +1,5 @@
-package guide.atech.kstreams.ktables;
+package guide.atech.ktable.basic;
 
-import guide.atech.kstreams.BasicStreams;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.apache.kafka.common.serialization.Serdes;
@@ -76,7 +75,7 @@ public class StreamingTableApp {
     private static Properties createProperties() {
         Properties properties = new Properties();
 
-        properties.put(StreamsConfig.APPLICATION_ID_CONFIG, BasicStreams.class.getName());
+        properties.put(StreamsConfig.APPLICATION_ID_CONFIG, StreamingTableApp.class.getName());
         properties.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092,localhost:9093");
 
         // This configuration defines the base directory location where the application is going to create our local state store.

@@ -1,8 +1,10 @@
-package guide.atech.kstreams.serde;
+package guide.atech.serde;
 
 import guide.atech.kstreams.json.types.Message;
 import guide.atech.schema.json.Notification;
 import guide.atech.schema.json.PosInvoice;
+import guide.atech.schema.json.employee.DepartmentAggregate;
+import guide.atech.schema.json.employee.Employee;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
 
@@ -60,6 +62,42 @@ public class AppSerdes extends Serdes {
         serdeConfigs.put(JsonDeserializer.VALUE_CLASS_NAME_CONFIG, Notification.class);
 
         NotificationSerde serde = new NotificationSerde();
+        serde.configure(serdeConfigs, false);
+
+        return serde;
+    }
+
+    // Employee Serde
+    static final class EmployeeSerde extends Serdes.WrapperSerde<Employee> {
+        public EmployeeSerde() {
+            super(new JsonSerializer<Employee>(), new JsonDeserializer<Employee>());
+        }
+    }
+
+    public static Serde<Employee> Employee() {
+
+        Map<String, Object> serdeConfigs = new HashMap<>();
+        serdeConfigs.put(JsonDeserializer.VALUE_CLASS_NAME_CONFIG, Notification.class);
+
+        EmployeeSerde serde = new EmployeeSerde();
+        serde.configure(serdeConfigs, false);
+
+        return serde;
+    }
+
+    // Department Aggregate Serde
+    static final class DepartmentAggregateSerde extends Serdes.WrapperSerde<DepartmentAggregate> {
+        public DepartmentAggregateSerde() {
+            super(new JsonSerializer<DepartmentAggregate>(), new JsonDeserializer<DepartmentAggregate>());
+        }
+    }
+
+    public static Serde<DepartmentAggregate> DepartmentAggregate() {
+
+        Map<String, Object> serdeConfigs = new HashMap<>();
+        serdeConfigs.put(JsonDeserializer.VALUE_CLASS_NAME_CONFIG, Notification.class);
+
+        DepartmentAggregateSerde serde = new DepartmentAggregateSerde();
         serde.configure(serdeConfigs, false);
 
         return serde;

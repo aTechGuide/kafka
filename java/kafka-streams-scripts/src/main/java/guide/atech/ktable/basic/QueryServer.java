@@ -1,4 +1,4 @@
-package guide.atech.kstreams.ktables;
+package guide.atech.ktable.basic;
 
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.KeyValue;

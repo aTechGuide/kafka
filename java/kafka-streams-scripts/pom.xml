@@ -49,7 +49,7 @@
         <dependency>
             <groupId>guide.atech</groupId>
             <artifactId>json2pojo</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
         </dependency>
 
         <!--spark java framework for embedded  -->

@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "javaType": "guide.atech.schema.json.employee.Employee",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "salary": {
+      "type": "integer"
+    }
+  }
+}

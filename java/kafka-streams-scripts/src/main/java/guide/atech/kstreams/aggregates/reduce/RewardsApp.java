@@ -1,6 +1,6 @@
 package guide.atech.kstreams.aggregates.reduce;
 
-import guide.atech.kstreams.serde.AppSerdes;
+import guide.atech.serde.AppSerdes;
 import guide.atech.schema.json.Notification;
 import guide.atech.schema.json.PosInvoice;
 import lombok.extern.slf4j.Slf4j;

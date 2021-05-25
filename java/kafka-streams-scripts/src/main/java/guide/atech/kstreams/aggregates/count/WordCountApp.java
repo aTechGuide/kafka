@@ -1,4 +1,4 @@
-package guide.atech.kstreams.aggregates.wordcount;
+package guide.atech.kstreams.aggregates.count;
 
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
