@@ -18,7 +18,7 @@ import java.util.Properties;
  * - https://www.udemy.com/course/kafka-streams-real-time-stream-processing-master-class/learn/lecture/14244122
  */
 @Slf4j
-public class AverageApp {
+public class AverageSalaryByDepartmentApp {
 
     private static final String INPUT_TOPIC_NAME = "basic-producer-topic";
     private static final String STATE_STORE_NAME = "average-store";
@@ -68,7 +68,7 @@ public class AverageApp {
     private static Properties createProperties() {
         Properties properties = new Properties();
 
-        properties.put(StreamsConfig.APPLICATION_ID_CONFIG, AverageApp.class.getName());
+        properties.put(StreamsConfig.APPLICATION_ID_CONFIG, AverageSalaryByDepartmentApp.class.getName());
         properties.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092,localhost:9093");
 
         properties.put(StreamsConfig.STATE_DIR_CONFIG, "./tmp/state-store");
